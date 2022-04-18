@@ -6,7 +6,8 @@
   <header>
     <div class="wrapper">
       <nav>
-        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/">Create</RouterLink>
+        <RouterLink to="/Activities">Activities</RouterLink>
       </nav>
     </div>
   </header>
@@ -15,10 +16,19 @@
 
 <style lang="scss" scoped>
 header {
-  position: fixed;
+  position: sticky;
   top: 0;
-  padding: 2rem;
+
   z-index: 1;
+  width: 100%;
+  background-color: rgb(20, 22, 39);
+
+
+  nav{
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+  }
 
   a {
     text-decoration: none;

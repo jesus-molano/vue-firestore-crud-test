@@ -1,4 +1,4 @@
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, getDocs } from "firebase/firestore";
 import { db } from '@/services/firebase';
 
 export const addNewActivity = async (newActivity) => {
@@ -8,4 +8,14 @@ export const addNewActivity = async (newActivity) => {
   } catch (e) {
     console.error("Error adding document: ", e);
   }
+}
+
+export const getAllActivities = () => {
+  try {
+    return getDocs(collection(db, "activities"));
+    
+  } catch (error) {
+    return console.error("Error getting documents ", e);
+  }
+
 }
