@@ -1,5 +1,9 @@
+<script setup>
+  import { RouterLink } from "vue-router";
+</script>
+
 <template>
-    <header>
+  <header>
     <div class="wrapper">
       <nav>
         <RouterLink to="/">Home</RouterLink>
@@ -8,20 +12,17 @@
   </header>
 </template>
 
-<script setup>
-  import { RouterLink } from "vue-router";
-
-</script>
 
 <style lang="scss" scoped>
-  header{
-    position: fixed;
-    top: 0;
-    padding: 2rem;
+header {
+  position: fixed;
+  top: 0;
+  padding: 2rem;
+  z-index: 1;
 
-    a{
-      text-decoration: none;
-      color: #fff;
-    }
+  a {
+    text-decoration: none;
+    color: #fff;
   }
+}
 </style>
